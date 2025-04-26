@@ -4,6 +4,7 @@ import About from './components/About';
 import Roadmap from './components/Roadmap';
 import Tokenomics from './components/Tokenomics';
 import Community from './components/Community';
+import Footer from './components/Footer';
 
 // Import Animations
 import './styles/animations.css';
@@ -26,7 +27,8 @@ const App = () => {
       {/* Community Section */}
       <Community />
 
-      {/* Future Sections (Footer, etc.) */}
+      {/* Footer Section */}
+      <Footer />
     </div>
   );
 };
