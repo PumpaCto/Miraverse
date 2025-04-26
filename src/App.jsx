@@ -3,6 +3,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Roadmap from './components/Roadmap';
 import Tokenomics from './components/Tokenomics';
+import Community from './components/Community';
 
 // Import Animations
 import './styles/animations.css';
@@ -22,7 +23,10 @@ const App = () => {
       {/* Tokenomics Section */}
       <Tokenomics />
 
-      {/* Future Sections (Community, Footer, etc.) */}
+      {/* Community Section */}
+      <Community />
+
+      {/* Future Sections (Footer, etc.) */}
     </div>
   );
 };
