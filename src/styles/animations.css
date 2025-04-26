@@ -1,0 +1,30 @@
+/* Slow Spin Animation for Background Spiral */
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Fade In Down Animation for Headings */
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade In Up Animation for Paragraphs */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation Classes to Use in Components */
+.animate-spin-slow {
+  animation: spin-slow 20s linear infinite;
+}
+
+.animate-fadeInDown {
+  animation: fadeInDown 1s ease-out forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease-out forwards;
+}
