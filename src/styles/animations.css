@@ -26,3 +26,4 @@
 .animate-fadeInUp {
   animation: fadeInUp 1s ease-out forwards;
 }
+import './styles/animations.css';
