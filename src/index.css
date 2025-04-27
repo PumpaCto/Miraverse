@@ -1,0 +1,24 @@
+/* Basic Reset and General Styles for Miraverse Site */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  color: white;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+section {
+  padding: 80px 0;
+}
