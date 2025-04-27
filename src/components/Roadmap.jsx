@@ -3,7 +3,7 @@ import React from 'react';
 const Roadmap = () => {
   return (
     <section className="roadmap-section flex flex-col items-center justify-center min-h-screen bg-black text-white px-6 text-center">
-      <div className="max-w-4xl animate-fadeInUp">
+      <div className="max-w-4xl animate-slideInDown">
         <h2 className="text-4xl font-bold mb-6">Roadmap</h2>
         <div className="text-lg leading-relaxed space-y-6">
           <div>
