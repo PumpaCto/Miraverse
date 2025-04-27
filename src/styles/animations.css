@@ -1,6 +1,6 @@
-/* Animations for Miraverse Site */
+/* Animations for Miraverse */
 
-/* Fade In Animation */
+/* Fade In Up */
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -15,3 +15,37 @@
 .animate-fadeInUp {
   animation: fadeInUp 1s ease-out both;
 }
+
+/* Fade In */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1.2s ease-out both;
+}
+
+/* Zoom In */
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-zoomIn {
+  animation: zoomIn 1s ease-out both;
+}
+
+/* Slide In Right */
+@keyframes slideInRight {
+  0% {
