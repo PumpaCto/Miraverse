@@ -3,7 +3,7 @@ import React from 'react';
 const Tokenomics = () => {
   return (
     <section className="tokenomics-section flex flex-col items-center justify-center min-h-screen bg-black text-white px-6 text-center">
-      <div className="max-w-3xl animate-fadeInUp">
+      <div className="max-w-3xl animate-slideInLeft">
         <h2 className="text-4xl font-bold mb-6">Tokenomics</h2>
         <p className="text-lg leading-relaxed mb-8">
           A fair and transparent distribution model designed to fuel growth and empower the community.
