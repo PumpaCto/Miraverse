@@ -3,7 +3,7 @@ import React from 'react';
 const Community = () => {
   return (
     <section className="community-section flex flex-col items-center justify-center min-h-screen bg-black text-white px-6 text-center">
-      <div className="max-w-3xl animate-fadeInUp">
+      <div className="max-w-3xl animate-zoomIn">
         <h2 className="text-4xl font-bold mb-6">Join the Miraverse Community</h2>
         <p className="text-lg leading-relaxed mb-8">
           Be part of the Miraverse revolution!  
