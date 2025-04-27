@@ -1,55 +1,59 @@
 import React from 'react';
 
-const steps = [
-  {
-    title: 'Phase 1 - Launch',
-    description: 'Token launch, website release, initial community formation.',
-    icon: '🚀',
-  },
-  {
-    title: 'Phase 2 - Growth',
-    description: 'Expanding social media presence, early partnerships.',
-    icon: '🌌',
-  },
-  {
-    title: 'Phase 3 - Ecosystem',
-    description: 'Start of game development, NFT integration.',
-    icon: '🛸',
-  },
-  {
-    title: 'Phase 4 - Expansion',
-    description: 'Miraverse open-world metaverse release, CEX listings.',
-    icon: '✨',
-  },
-];
-
-const Roadmap = () => {
+function Roadmap() {
   return (
-    <section id="roadmap" className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-black via-indigo-900 to-black text-white px-8 text-center overflow-hidden">
-      
-      {/* Yıldız Arka Plan */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="stars"></div>
-      </div>
-
-      {/* Başlık */}
-      <div className="relative z-10 max-w-4xl animate-fadeIn">
-        <h2 className="text-4xl md:text-5xl font-bold mb-12">Miraverse Roadmap</h2>
-
-        {/* Adımlar */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {steps.map((step, index) => (
-            <div key={index} className="bg-white/5 backdrop-blur-md p-6 rounded-xl hover:bg-white/10 transition duration-300 animate-slideInUp">
-              <div className="text-5xl mb-4">{step.icon}</div>
-              <h3 className="text-2xl font-bold mb-2">{step.title}</h3>
-              <p className="text-md">{step.description}</p>
-            </div>
-          ))}
+    <section id="roadmap" style={styles.roadmapSection}>
+      <h2 style={styles.title} className="animate-zoomIn">Our Roadmap</h2>
+      <div style={styles.timeline}>
+        <div style={styles.step}>
+          <h3>Q2 2025</h3>
+          <p>Launch of Miraverse Token and Community Building</p>
         </div>
-
+        <div style={styles.step}>
+          <h3>Q3 2025</h3>
+          <p>Release of Crypto Anime Trailers and NFT Characters</p>
+        </div>
+        <div style={styles.step}>
+          <h3>Q4 2025</h3>
+          <p>Open-World Game Beta Release and Merch Store Launch</p>
+        </div>
+        <div style={styles.step}>
+          <h3>Q1 2026</h3>
+          <p>Major Exchange Listings and Global Expansion</p>
+        </div>
       </div>
     </section>
   );
+}
+
+const styles = {
+  roadmapSection: {
+    minHeight: '100vh',
+    background: '#0f0c29',
+    backgroundImage: 'linear-gradient(180deg, #302b63, #24243e)',
+    color: '#ffffff',
+    padding: '100px 20px',
+    fontFamily: 'Arial, sans-serif',
+    textAlign: 'center',
+  },
+  title: {
+    fontSize: '40px',
+    marginBottom: '50px',
+  },
+  timeline: {
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '40px',
+    alignItems: 'center',
+  },
+  step: {
+    background: '#1c1c3c',
+    padding: '20px 30px',
+    borderRadius: '12px',
+    width: '90%',
+    maxWidth: '600px',
+    boxShadow: '0 0 10px #00ffff',
+  }
 };
 
 export default Roadmap;
