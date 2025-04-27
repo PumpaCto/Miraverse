@@ -1,14 +1,40 @@
 import React from 'react';
 
-const Footer = () => {
+function Footer() {
   return (
-    <footer className="relative flex flex-col items-center justify-center bg-black text-gray-400 py-8 text-center text-sm animate-fadeIn">
-      <div className="container mx-auto">
-        <p>© 2025 Miraverse Token. All rights reserved.</p>
-        <p className="mt-2 italic">Built for dreamers, by dreamers. Powered by the stars.</p>
+    <footer style={styles.footer}>
+      <p>© 2025 Miraverse Token | All Rights Reserved</p>
+      <div style={styles.links}>
+        <a href="https://t.me/pumpatoken" target="_blank" rel="noopener noreferrer" style={styles.link}>
+          Telegram
+        </a>
+        <a href="https://x.com/Pumpa_Cto" target="_blank" rel="noopener noreferrer" style={styles.link}>
+          Twitter
+        </a>
       </div>
     </footer>
   );
+}
+
+const styles = {
+  footer: {
+    backgroundColor: '#111',
+    color: '#fff',
+    padding: '30px 20px',
+    textAlign: 'center',
+    fontFamily: 'Arial, sans-serif',
+  },
+  links: {
+    marginTop: '15px',
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '30px',
+  },
+  link: {
+    color: '#00ffff',
+    textDecoration: 'none',
+    fontSize: '18px',
+  }
 };
 
 export default Footer;
