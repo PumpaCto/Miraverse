@@ -2,10 +2,10 @@ import React from 'react';
 
 const Footer = () => {
   return (
-    <footer className="footer-section bg-black text-gray-400 text-center py-6 text-sm">
-      <div className="animate-fadeIn">
+    <footer className="relative flex flex-col items-center justify-center bg-black text-gray-400 py-8 text-center text-sm animate-fadeIn">
+      <div className="container mx-auto">
         <p>© 2025 Miraverse Token. All rights reserved.</p>
-        <p>Crafted with passion for the future of crypto and gaming.</p>
+        <p className="mt-2 italic">Built for dreamers, by dreamers. Powered by the stars.</p>
       </div>
     </footer>
   );
