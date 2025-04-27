@@ -1,41 +1,46 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
-const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const offset = window.scrollY;
-      if (offset > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
+function Navbar() {
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/80 backdrop-blur-md shadow-lg' : 'bg-transparent'}`}>
-      <div className="container mx-auto flex justify-between items-center p-4">
-        {/* Logo */}
-        <a href="#hero" className="text-2xl font-bold text-white hover:text-blue-400 transition">
-          Miraverse
-        </a>
-
-        {/* Menu */}
-        <div className="hidden md:flex space-x-8 text-lg">
-          <a href="#hero" className="hover:text-blue-400 transition">Home</a>
-          <a href="#about" className="hover:text-blue-400 transition">About</a>
-          <a href="#roadmap" className="hover:text-blue-400 transition">Roadmap</a>
-          <a href="#tokenomics" className="hover:text-blue-400 transition">Tokenomics</a>
-          <a href="#community" className="hover:text-blue-400 transition">Community</a>
-        </div>
-      </div>
+    <nav className="navbar" style={styles.navbar}>
+      <div style={styles.logo}>Miraverse</div>
+      <ul style={styles.navLinks}>
+        <li><a href="#hero" style={styles.link}>Home</a></li>
+        <li><a href="#roadmap" style={styles.link}>Roadmap</a></li>
+        <li><a href="#community" style={styles.link}>Community</a></li>
+      </ul>
     </nav>
   );
+}
+
+const styles = {
+  navbar: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '20px 50px',
+    backgroundColor: 'transparent',
+    position: 'fixed',
+    width: '100%',
+    top: 0,
+    zIndex: 1000,
+    fontFamily: 'Arial, sans-serif',
+  },
+  logo: {
+    color: '#00ffff',
+    fontSize: '24px',
+    fontWeight: 'bold',
+  },
+  navLinks: {
+    listStyle: 'none',
+    display: 'flex',
+    gap: '30px',
+  },
+  link: {
+    color: '#ffffff',
+    textDecoration: 'none',
+    fontSize: '18px',
+  }
 };
 
 export default Navbar;
