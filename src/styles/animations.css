@@ -1,0 +1,78 @@
+@keyframes zoomIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-zoomIn {
+  animation: zoomIn 1s ease-out both;
+}
+
+@keyframes glow {
+  0% { opacity: 0.7; filter: drop-shadow(0 0 10px #00ffff); }
+  50% { opacity: 1; filter: drop-shadow(0 0 20px #00ffff); }
+  100% { opacity: 0.7; filter: drop-shadow(0 0 10px #00ffff); }
+}
+
+.animate-glow {
+  animation: glow 2s infinite ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease-out both;
+}
+
+@keyframes loadingBar {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+.animate-loadingBar {
+  animation: loadingBar 3s linear forwards;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.animate-typing {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid #00ffff;
+  animation: typing 3s steps(30, end) both;
+}
+
+@keyframes moveStars {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 10000px 5000px;
+  }
+}
+
+.stars {
+  width: 100%;
+  height: 100%;
+  background: transparent url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/star.png') repeat top center;
+  animation: moveStars 60s linear infinite;
+  opacity: 0.2;
+}
